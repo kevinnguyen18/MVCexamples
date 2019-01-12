@@ -8,12 +8,16 @@ namespace WebApplication1.Controllers
 {
     public class ComicBooksController : Controller
     {
-        public ContentResult Detail()
+        public ActionResult Detail()
         {
-            return new ContentResult()
+
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Saturday)
             {
-                Content = "This is from the comicbook controller"
-            };
+                return Redirect("/");
+            }
+
+            return Content("This is from the comicbook controller");
+           
 
 
         }
