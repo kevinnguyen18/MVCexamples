@@ -11,12 +11,7 @@ namespace WebApplication1.Controllers
         public ActionResult Detail()
         {
 
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Saturday)
-            {
-                return Redirect("/");
-            }
-
-            return Content("This is from the comicbook controller");
+            return View();
            
 
 
