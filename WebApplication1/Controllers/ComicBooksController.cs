@@ -8,9 +8,14 @@ namespace WebApplication1.Controllers
 {
     public class ComicBooksController : Controller
     {
-        public String Detail()
+        public ContentResult Detail()
         {
-            return "Hello from ComicBook Controller";
+            return new ContentResult()
+            {
+                Content = "This is from the comicbook controller"
+            };
+
+
         }
     }
 }
